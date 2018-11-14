@@ -1,7 +1,9 @@
 /// <reference types="cypress"/>
 
 import { LoginPage } from './pageobects/LoginPage';
+import { MegaMenu } from './pageobects/MegaMenu';
 import { login, logout } from './pageobects/global';
+import { Perspectives } from './pageobects/Perspectives';
 
 describe('google search', () => {
   
@@ -21,5 +23,11 @@ describe('google search', () => {
 
 		loginPage.message.contains('h3', 'Login failed: Not Authorized')
     });
+
+    it('Create and Deploy Space, Repository, Project, Asset', function() {
+        login('admin', 'admin')
+        MegaMenu.goto(Perspectives.AUTHORING)
+        cy.url().should('include', 'LibraryScreen')
+    })
   
 });
