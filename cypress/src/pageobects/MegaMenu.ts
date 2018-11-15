@@ -1,4 +1,4 @@
-import { Perspectives } from './Perspectives';
+import { Perspectives } from '../constants/Perspectives';
 
 export class MegaMenu {
 

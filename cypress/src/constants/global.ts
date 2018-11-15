@@ -1,4 +1,4 @@
-import {LoginPage} from './LoginPage';
+import {LoginPage} from '../pageobects/LoginPage';
 
 export function login(username: string, password: string) {
     new LoginPage().login(username, password)

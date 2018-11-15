@@ -1,9 +1,9 @@
 /// <reference types="cypress"/>
 
-import { LoginPage } from './pageobects/LoginPage';
-import { MegaMenu } from './pageobects/MegaMenu';
-import { login, logout } from './pageobects/global';
-import { Perspectives } from './pageobects/Perspectives';
+import { LoginPage } from '../src/pageobects/LoginPage';
+import { MegaMenu } from '../src/pageobects/MegaMenu';
+import { login, logout } from '../src/constants/global';
+import { Perspectives } from '../src/constants/Perspectives';
 
 describe('google search', () => {
   
