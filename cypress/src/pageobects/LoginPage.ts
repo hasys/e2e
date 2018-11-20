@@ -1,3 +1,6 @@
+import { Perspectives } from "../constants/Perspectives";
+import { MegaMenu } from "./MegaMenu";
+
 export class LoginPage {
     visit() {
         cy.visit('http://localhost:8080/business-central')
@@ -24,5 +27,9 @@ export class LoginPage {
 
     submit() {
         cy.get('input[type=submit]').click()
+    }
+
+    goto(perspective:Perspectives) {
+        MegaMenu.goto(perspective)
     }
 }
